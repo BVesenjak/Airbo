@@ -1399,10 +1399,7 @@ p {
     }
     
     .navbar-links {
-        order: 4;
-        width: 100%;
-        justify-content: center;
-        margin-top: 15px;
+        display: none;  /* Hide on mobile */
     }
     
     .hero-title {
