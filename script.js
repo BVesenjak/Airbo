@@ -83,28 +83,16 @@ let isNavbarVisible = true;
 
 function handleNavbarVisibility() {
     const currentScroll = window.pageYOffset;
-    const heroSection = document.getElementById('hero');
-    const finalCTASection = document.getElementById('final-cta');
     
-    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-    const finalCTATop = finalCTASection.offsetTop;
-    
-    // Visible at hero section
-    if (currentScroll < heroBottom) {
-        navbar.classList.remove('hidden');
-        isNavbarVisible = true;
+    // No scroll = transparent navbar background
+    if (currentScroll === 0) {
+        navbar.classList.add('transparent');
+        navbar.classList.remove('visible-opaque', 'shrunk');
     }
-    // Hidden between hero and section 7 (final CTA)
-    else if (currentScroll >= heroBottom && currentScroll < finalCTATop - 100) {
-        if (isNavbarVisible) {
-            navbar.classList.add('hidden');
-            isNavbarVisible = false;
-        }
-    }
-    // Visible from section 7 onwards
-    else if (currentScroll >= finalCTATop - 100) {
-        navbar.classList.remove('hidden');
-        isNavbarVisible = true;
+    // Any scroll = navbar appears with background
+    else {
+        navbar.classList.remove('transparent');
+        navbar.classList.add('visible-opaque', 'shrunk');
     }
     
     lastScrollPosition = currentScroll;

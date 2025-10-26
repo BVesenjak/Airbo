@@ -72,13 +72,23 @@ body.cursor-click .btn-cta *:hover {
     background-color: rgba(0, 0, 0, 0.95);
     padding: 20px 0;
     z-index: 1000;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-bottom: 1px solid var(--border-gray);
+    transition: all 0.3s ease;
 }
 
-.navbar-custom.hidden {
-    transform: translateY(-100%);
-    opacity: 0;
+/* Transparent state - only background disappears, content stays visible */
+.navbar-custom.transparent {
+    background-color: transparent;
+    border-bottom-color: transparent;
+}
+
+/* Visible with opacity (any scroll) */
+.navbar-custom.visible-opaque {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Shrunk state (reduced height) */
+.navbar-custom.shrunk {
+    padding: 15px 0;
 }
 
 .navbar-content {
