@@ -533,6 +533,34 @@ document.addEventListener('click', function(e) {
 });
 */
 
+// Hero video - play once and fade out
+window.addEventListener('load', () => {
+    const heroVideo = document.getElementById('heroVideo');
+    
+    if (heroVideo) {
+        console.log('Hero video found');
+        
+        // Force play (some browsers need this)
+        heroVideo.play().then(() => {
+            console.log('Video playing');
+        }).catch(err => {
+            console.error('Video play failed:', err);
+            // If autoplay fails, fade out immediately
+            heroVideo.classList.add('fade-out');
+            setTimeout(() => heroVideo.remove(), 800);
+        });
+        
+        // When video ends, fade it out
+        heroVideo.addEventListener('ended', () => {
+            console.log('Video ended');
+            heroVideo.classList.add('fade-out');
+            setTimeout(() => {
+                heroVideo.remove();
+            }, 800);
+        });
+    }
+});
+
 // =================================
 // PERFORMANCE OPTIMIZATION
 // =================================
