@@ -33,6 +33,32 @@ body {
     max-width: 100%;
 }
 
+/* Custom Cursor Styles */
+*, *:hover {
+    cursor: url('assets/default_64_2.png') 16 16, auto !important;
+}
+
+.btn-cta,
+.btn-cta:hover,
+.btn-cta *,
+.btn-cta *:hover,
+button.btn-cta,
+button.btn-cta:hover {
+    cursor: url('assets/hover64_3.png') 16 16, pointer !important;
+}
+
+body.cursor-click *,
+body.cursor-click *:hover {
+    cursor: url('assets/click64.gif') 16 16, auto !important;
+}
+
+body.cursor-click .btn-cta,
+body.cursor-click .btn-cta:hover,
+body.cursor-click .btn-cta *,
+body.cursor-click .btn-cta *:hover {
+    cursor: url('assets/click64.gif') 16 16, pointer !important;
+}
+
 /* =================================
    NAVIGATION BAR
    ================================= */
