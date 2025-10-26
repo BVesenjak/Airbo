@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARCHARGE - Placeholder Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #e50914;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .info {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #e50914;
+        }
+        .generator {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .placeholder-card {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .placeholder-card h3 {
+            color: #e50914;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        canvas {
+            width: 100%;
+            border: 2px solid #444;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .download-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #b50710;
+        }
+        .dimensions {
+            font-size: 12px;
+            color: #b3b3b3;
+            margin-bottom: 10px;
+        }
+        .instructions {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+        .instructions ol {
+            margin-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔥 WARCHARGE Placeholder Image Generator</h1>
+    
+    <div class="info">
+        <h2>Quick Start</h2>
+        <p>This tool generates placeholder images for the WARCHARGE landing page. Click "Download" on each image below to save it to your <code>assets/</code> folder.</p>
+        <p><strong>Note:</strong> These are temporary placeholders. Replace them with real product photos for production!</p>
+    </div>
+
+    <div class="generator" id="generator"></div>
+
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Click the "Download" button under each placeholder image</li>
+            <li>Save the image to your <code>assets/</code> folder with the exact filename shown</li>
+            <li>The landing page will automatically display these images</li>
+            <li>Replace with real images before going live!</li>
+        </ol>
+        <p><strong>Alternative:</strong> Use free stock photo sites like <a href="https://unsplash.com" target="_blank" style="color: #e50914;">Unsplash</a> or <a href="https://pexels.com" target="_blank" style="color: #e50914;">Pexels</a> for better-looking placeholders.</p>
+    </div>
+
+    <script>
+        const images = [
+            { name: 'product-hero.png', width: 1000, height: 1000, label: 'HERO\nPRODUCT', color: '#e50914' },
+            { name: 'product-detail.png', width: 1000, height: 1000, label: 'PRODUCT\nDETAIL', color: '#e50914' },
+            { name: 'product-main.png', width: 1000, height: 1000, label: 'MAIN\nPRODUCT', color: '#e50914' },
+            { name: 'product-lifestyle.png', width: 1200, height: 800, label: 'LIFESTYLE\nSHOT', color: '#e50914' },
+            { name: 'gut-health.jpg', width: 1200, height: 800, label: 'GUT\nHEALTH', color: '#3a3a3a' },
+            { name: 'high-energy.jpg', width: 1200, height: 800, label: 'HIGH\nENERGY', color: '#3a3a3a' },
+            { name: 'mood-balance.jpg', width: 1200, height: 800, label: 'MOOD\nBALANCE', color: '#3a3a3a' },
+            { name: 'immune-defense.jpg', width: 1200, height: 800, label: 'IMMUNE\nDEFENSE', color: '#3a3a3a' },
+            { name: 'testimonial-marcus.jpg', width: 800, height: 800, label: 'MARCUS K.', color: '#2a2a2a' },
+            { name: 'testimonial-james.jpg', width: 800, height: 800, label: 'JAMES R.', color: '#2a2a2a' },
+            { name: 'testimonial-alex.jpg', width: 800, height: 800, label: 'ALEX M.', color: '#2a2a2a' },
+            { name: 'testimonial-1.jpg', width: 640, height: 480, label: 'VIDEO\nJOHN D.', color: '#2a2a2a' },
+            { name: 'testimonial-2.jpg', width: 640, height: 480, label: 'VIDEO\nMICHAEL B.', color: '#2a2a2a' },
+            { name: 'testimonial-3.jpg', width: 640, height: 480, label: 'VIDEO\nCHRIS L.', color: '#2a2a2a' },
+            { name: 'video-thumb.jpg', width: 1280, height: 720, label: 'PROMO\nVIDEO', color: '#1a1a1a' }
+        ];
+
+        const generator = document.getElementById('generator');
+
+        images.forEach(img => {
+            const card = document.createElement('div');
+            card.className = 'placeholder-card';
+            
+            const title = document.createElement('h3');
+            title.textContent = img.name;
+            card.appendChild(title);
+            
+            const dimensions = document.createElement('div');
+            dimensions.className = 'dimensions';
+            dimensions.textContent = `${img.width} × ${img.height}px`;
+            card.appendChild(dimensions);
+            
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext('2d');
+            
+            // Draw background
+            ctx.fillStyle = img.color;
+            ctx.fillRect(0, 0, img.width, img.height);
+            
+            // Draw diagonal lines pattern
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.lineWidth = 2;
+            for (let i = -img.height; i < img.width; i += 40) {
+                ctx.beginPath();
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i + img.height, img.height);
+                ctx.stroke();
+            }
+            
+            // Draw text
+            ctx.fillStyle = '#ffffff';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const lines = img.label.split('\n');
+            const fontSize = img.width / 15;
+            ctx.font = `bold ${fontSize}px Arial`;
+            
+            lines.forEach((line, index) => {
+                const y = img.height / 2 + (index - (lines.length - 1) / 2) * fontSize * 1.2;
+                ctx.fillText(line, img.width / 2, y);
+            });
+            
+            // Draw dimensions at bottom
+            ctx.font = `${fontSize / 3}px Arial`;
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.fillText(`${img.width} × ${img.height}`, img.width / 2, img.height - fontSize / 2);
+            
+            card.appendChild(canvas);
+            
+            const downloadBtn = document.createElement('button');
+            downloadBtn.className = 'download-btn';
+            downloadBtn.textContent = 'Download';
+            downloadBtn.onclick = () => {
+                const link = document.createElement('a');
+                link.download = img.name;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+            card.appendChild(downloadBtn);
+            
+            generator.appendChild(card);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARCHARGE - Peak Performance Nutrition</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-content">
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <a href="#" class="navbar-logo">
+                    <div class="logo-flame" style="font-size: 48px;">🔥</div>
+                </a>
+                
+                <div class="navbar-links">
+                    <a href="#merch" class="nav-link" data-en="MERCH" data-de="MERCH">MERCH</a>
+                    <a href="#cta" class="nav-link nav-link-cta" data-en="GET WARCHARGE" data-de="WARCHARGE KAUFEN">GET WARCHARGE</a>
+                </div>
+                
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <button class="close-menu" id="closeMenuBtn">&times;</button>
+        <ul class="menu-list">
+            <li><a href="#hero" data-en="Home" data-de="Startseite">Home</a></li>
+            <li><a href="#value-prop" data-en="Benefits" data-de="Vorteile">Benefits</a></li>
+            <li><a href="#testimonials" data-en="Testimonials" data-de="Testimonials">Testimonials</a></li>
+            <li><a href="#faq" data-en="FAQ" data-de="FAQ">FAQ</a></li>
+            <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
+        </ul>
+        <div class="language-toggle">
+            <button id="langToggle" class="lang-btn">EN / DE</button>
+        </div>
+    </div>
+
+    <!-- Sticky Footer CTA -->
+    <div id="stickyFooterCTA" class="sticky-footer-cta">
+        <div class="container">
+            <div class="footer-cta-content">
+                <div class="footer-cta-icon">⚡</div>
+                <div class="footer-cta-text">
+                    <span data-en="Limited Time: 20% OFF Your First Order" data-de="Zeitlich begrenzt: 20% Rabatt auf Ihre erste Bestellung">Limited Time: 20% OFF Your First Order</span>
+                </div>
+                <button class="btn-cta" data-en="GET WARCHARGE" data-de="WARCHARGE KAUFEN">GET WARCHARGE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">
+                        <span class="thin" data-en="UNLEASH YOUR" data-de="ENTFESSELN SIE IHR">UNLEASH YOUR</span>
+                        <span class="bold" data-en="WARRIOR POTENTIAL" data-de="KRIEGER POTENZIAL">WARRIOR POTENTIAL</span>
+                    </h1>
+                    <p class="hero-subtitle" data-en="The ultimate all-in-one performance nutrition designed for peak male vitality" data-de="Die ultimative All-in-One-Leistungsernährung für maximale männliche Vitalität">
+                        The ultimate all-in-one performance nutrition designed for peak male vitality
+                    </p>
+                    <button class="btn-cta btn-hero" data-en="GET WARCHARGE NOW" data-de="JETZT WARCHARGE KAUFEN">GET WARCHARGE NOW</button>
+                    
+                    <div class="trust-badge">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p data-en="Trusted by 10,000+ Warriors Worldwide" data-de="Vertraut von über 10.000 Kriegern weltweit">Trusted by 10,000+ Warriors Worldwide</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="assets/product-hero-hover.png" alt="WARCHARGE Product" class="product-render" onmouseover="this.src='assets/product-hero.png'" 
+                        onmouseout="this.src='assets/product-hero-hover.png'" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Value Proposition -->
+    <section id="value-prop" class="value-prop-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="thin" data-en="MORE-IN-ONE" data-de="MEHR-IN-EINEM">MORE-IN-ONE</span>
+                <span class="bold" data-en="NUTRITION" data-de="ERNÄHRUNG">NUTRITION</span>
+            </h2>
+            
+            <p class="value-description" data-en="WARCHARGE combines cutting-edge nutritional science with ancient warrior principles. Each serving delivers a precisely calibrated blend of adaptogens, nootropics, and vital nutrients designed to optimize male performance across all domains of life." data-de="WARCHARGE kombiniert modernste Ernährungswissenschaft mit alten Krieger-Prinzipien. Jede Portion liefert eine präzise kalibrierte Mischung aus Adaptogenen, Nootropika und lebenswichtigen Nährstoffen für optimale männliche Leistung.">
+                WARCHARGE combines cutting-edge nutritional science with ancient warrior principles. Each serving delivers a precisely calibrated blend of adaptogens, nootropics, and vital nutrients designed to optimize male performance across all domains of life.
+            </p>
+            
+            <h3 class="value-subheading" data-en="INVEST IN YOUR LONG-TERM HEALTH" data-de="INVESTIEREN SIE IN IHRE LANGFRISTIGE GESUNDHEIT">INVEST IN YOUR LONG-TERM HEALTH</h3>
+            
+            <hr class="divider">
+            
+            <div class="icon-row">
+                <div class="icon-badge">
+                    <i class="fas fa-flask"></i>
+                    <span data-en="Science Driven" data-de="Wissenschaftlich fundiert">Science Driven</span>
+                </div>
+                <div class="icon-badge">
+                    <i class="fas fa-arrow-up"></i>
+                    <span data-en="Continual Improvement" data-de="Kontinuierliche Verbesserung">Continual Improvement</span>
+                </div>
+                <div class="icon-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span data-en="Warrior Certified" data-de="Krieger zertifiziert">Warrior Certified</span>
+                </div>
+                <div class="icon-badge">
+                    <i class="fas fa-medal"></i>
+                    <span data-en="Peak-Male Performance" data-de="Spitzen-Männliche Leistung">Peak-Male Performance</span>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <img src="assets/product-detail.png" alt="Product Detail" class="product-detail-img">
+                </div>
+                <div class="col-lg-6">
+                    <ul class="feature-list">
+                        <li data-en="40+ Premium Ingredients in Every Scoop" data-de="Über 40 Premium-Zutaten in jedem Löffel">40+ Premium Ingredients in Every Scoop</li>
+                        <li data-en="Boosts Natural Testosterone Production" data-de="Steigert die natürliche Testosteronproduktion">Boosts Natural Testosterone Production</li>
+                        <li data-en="Enhances Mental Clarity & Focus" data-de="Verbessert mentale Klarheit & Fokus">Enhances Mental Clarity & Focus</li>
+                        <li data-en="Supports Optimal Gut Health" data-de="Unterstützt optimale Darmgesundheit">Supports Optimal Gut Health</li>
+                        <li data-en="Strengthens Immune System" data-de="Stärkt das Immunsystem">Strengthens Immune System</li>
+                        <li data-en="Increases Energy Without Jitters" data-de="Erhöht Energie ohne Nervosität">Increases Energy Without Jitters</li>
+                        <li data-en="Reduces Stress & Anxiety" data-de="Reduziert Stress & Angst">Reduces Stress & Anxiety</li>
+                        <li data-en="Made in USA - GMP Certified" data-de="Hergestellt in den USA - GMP-zertifiziert">Made in USA - GMP Certified</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Visual Feature Grid -->
+    <section id="feature-grid" class="feature-grid-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <p class="grid-intro" data-en="Experience transformation across every aspect of your well-being with scientifically-backed ingredients working in synergy." data-de="Erleben Sie Transformation in jedem Aspekt Ihres Wohlbefindens mit wissenschaftlich untermauerten Inhaltsstoffen in Synergie.">
+                        Experience transformation across every aspect of your well-being with scientifically-backed ingredients working in synergy.
+                    </p>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h2 class="grid-title">
+                        <span class="bold" data-en="WHOLE BODY BENEFITS" data-de="GANZKÖRPER VORTEILE">WHOLE BODY BENEFITS</span>
+                        <span class="thin" data-en="IN ONE SCOOP" data-de="IN EINEM LÖFFEL">IN ONE SCOOP</span>
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-card-image" style="background-image: url('assets/gut-health.jpg');">
+                        </div>
+                        <div class="feature-card-content">
+                            <h3 data-en="GUT HEALTH" data-de="DARMGESUNDHEIT">GUT HEALTH</h3>
+                            <p data-en="Premium probiotics and digestive enzymes support optimal nutrient absorption and microbiome balance." data-de="Premium-Probiotika und Verdauungsenzyme unterstützen optimale Nährstoffaufnahme und Mikrobiom-Balance.">
+                                Premium probiotics and digestive enzymes support optimal nutrient absorption and microbiome balance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-card-image" style="background-image: url('assets/high-energy.jpg');">
+                        </div>
+                        <div class="feature-card-content">
+                            <h3 data-en="HIGH ENERGY" data-de="HOHE ENERGIE">HIGH ENERGY</h3>
+                            <p data-en="Natural caffeine sources combined with L-theanine provide sustained energy without crashes or jitters." data-de="Natürliche Koffeinquellen kombiniert mit L-Theanin liefern anhaltende Energie ohne Abstürze oder Nervosität.">
+                                Natural caffeine sources combined with L-theanine provide sustained energy without crashes or jitters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-card-image" style="background-image: url('assets/mood-balance.jpg');">
+                        </div>
+                        <div class="feature-card-content">
+                            <h3 data-en="MOOD BALANCE" data-de="STIMMUNGSBALANCE">MOOD BALANCE</h3>
+                            <p data-en="Adaptogenic herbs and amino acids work together to promote emotional stability and mental resilience." data-de="Adaptogene Kräuter und Aminosäuren arbeiten zusammen, um emotionale Stabilität und mentale Resilienz zu fördern.">
+                                Adaptogenic herbs and amino acids work together to promote emotional stability and mental resilience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-card-image" style="background-image: url('assets/immune-defense.jpg');">
+                        </div>
+                        <div class="feature-card-content">
+                            <h3 data-en="IMMUNE DEFENSE" data-de="IMMUNABWEHR">IMMUNE DEFENSE</h3>
+                            <p data-en="Powerful antioxidants and immune-supporting compounds fortify your body's natural defense systems." data-de="Starke Antioxidantien und immununterstützende Verbindungen stärken die natürlichen Abwehrsysteme Ihres Körpers.">
+                                Powerful antioxidants and immune-supporting compounds fortify your body's natural defense systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="shipping-footer">
+                <hr class="divider">
+                <div class="shipping-content">
+                    <i class="fas fa-globe"></i>
+                    <span data-en="SHIPPING WORLDWIDE" data-de="WELTWEITER VERSAND">SHIPPING WORLDWIDE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Product Highlight -->
+    <section id="product-highlight" class="product-highlight-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">
+                <span class="thin" data-en="WHICH PATH IS" data-de="WELCHER WEG IST">WHICH PATH IS</span>
+                <span class="bold" data-en="BEST FOR YOU?" data-de="DER BESTE FÜR SIE?">BEST FOR YOU?</span>
+            </h2>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="product-frame">
+                        <div class="corner-bracket tl"></div>
+                        <div class="corner-bracket tr"></div>
+                        <div class="corner-bracket bl"></div>
+                        <div class="corner-bracket br"></div>
+                        <img src="assets/product-main.png" alt="WARCHARGE" class="product-main-img">
+                        <p class="product-price">$79.99</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h3 class="product-name" data-en="WARCHARGE PREMIUM" data-de="WARCHARGE PREMIUM">WARCHARGE PREMIUM</h3>
+                    <p class="product-description" data-en="Our flagship formula contains everything you need to perform at your absolute peak. No compromises. No shortcuts. Just pure warrior fuel." data-de="Unsere Flaggschiff-Formel enthält alles, was Sie brauchen, um auf Ihrem absoluten Höhepunkt zu performen. Keine Kompromisse. Keine Abkürzungen. Nur reiner Krieger-Treibstoff.">
+                        Our flagship formula contains everything you need to perform at your absolute peak. No compromises. No shortcuts. Just pure warrior fuel.
+                    </p>
+                    <p class="product-callout" data-en="ARE YOU READY TO UNLEASH YOUR TRUE POTENTIAL?" data-de="SIND SIE BEREIT, IHR WAHRES POTENZIAL ZU ENTFESSELN?">
+                        ARE YOU READY TO UNLEASH YOUR TRUE POTENTIAL?
+                    </p>
+                    <button class="btn-cta btn-choose">
+                        <span data-en="CHOOSE NOW" data-de="JETZT WÄHLEN">CHOOSE NOW</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Testimonials -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="testimonial-nav">
+                <button class="testimonial-nav-btn active" data-index="0">MARCUS K.</button>
+                <button class="testimonial-nav-btn" data-index="1">JAMES R.</button>
+                <button class="testimonial-nav-btn" data-index="2">ALEX M.</button>
+            </div>
+            
+            <div class="testimonial-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="testimonial-text">
+                            <p class="testimonial-quote"></p>
+                            <div class="testimonial-signature"></div>
+                            <p class="testimonial-credentials"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="" alt="Testimonial" class="testimonial-image">
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-arrow testimonial-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonial-arrow testimonial-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Brand Reinforcement -->
+    <section id="brand-reinforcement" class="brand-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">
+                <span class="thin" data-en="TASTE OF" data-de="GESCHMACK DER">TASTE OF</span>
+                <span class="bold" data-en="DETERMINATION" data-de="ENTSCHLOSSENHEIT">DETERMINATION</span>
+            </h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="brand-feature">
+                        <div class="brand-icon">⚡</div>
+                        <h3 class="brand-feature-title" data-en="RELENTLESS QUALITY" data-de="KOMPROMISSLOSE QUALITÄT">RELENTLESS QUALITY</h3>
+                        <p data-en="Every batch is third-party tested for purity and potency. We source only premium, bioavailable ingredients." data-de="Jede Charge wird von Dritten auf Reinheit und Potenz getestet. Wir verwenden nur Premium-Zutaten mit hoher Bioverfügbarkeit.">
+                            Every batch is third-party tested for purity and potency. We source only premium, bioavailable ingredients.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="brand-feature">
+                        <div class="brand-icon">💓</div>
+                        <h3 class="brand-feature-title" data-en="PEAK VITALITY" data-de="SPITZENVITALITÄT">PEAK VITALITY</h3>
+                        <p data-en="Formulated to support cardiovascular health, hormonal balance, and cellular energy production for total body optimization." data-de="Formuliert zur Unterstützung der Herz-Kreislauf-Gesundheit, des hormonellen Gleichgewichts und der zellulären Energieproduktion.">
+                            Formulated to support cardiovascular health, hormonal balance, and cellular energy production for total body optimization.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="brand-feature">
+                        <div class="brand-icon">⏱️</div>
+                        <h3 class="brand-feature-title" data-en="INSTANT PERFORMANCE" data-de="SOFORTIGE LEISTUNG">INSTANT PERFORMANCE</h3>
+                        <p data-en="Feel the difference within 20 minutes. Experience sustained benefits that compound with consistent daily use." data-de="Spüren Sie den Unterschied innerhalb von 20 Minuten. Erleben Sie anhaltende Vorteile, die sich bei täglicher Anwendung verstärken.">
+                            Feel the difference within 20 minutes. Experience sustained benefits that compound with consistent daily use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Final Hero CTA -->
+    <section id="final-cta" class="final-cta-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">
+                <span class="bold" data-en="YOUR FUTURE IS BUILT ON" data-de="IHRE ZUKUNFT WIRD GEBAUT AUF">YOUR FUTURE IS BUILT ON</span>
+                <span class="thin" data-en="THE ACTIONS OF TODAY" data-de="DEN HANDLUNGEN VON HEUTE">THE ACTIONS OF TODAY</span>
+            </h2>
+            
+            <div class="media-frame">
+                <div class="corner-bracket tl"></div>
+                <div class="corner-bracket tr"></div>
+                <div class="corner-bracket bl"></div>
+                <div class="corner-bracket br"></div>
+                
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <img src="assets/product-lifestyle.png" alt="WARCHARGE Lifestyle" class="media-image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="video-thumbnail">
+                            <img src="assets/video-thumb.jpg" alt="Video">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="shipping-footer mt-5">
+                <hr class="divider">
+                <div class="shipping-content">
+                    <i class="fas fa-globe"></i>
+                    <span data-en="SHIPPING WORLDWIDE" data-de="WELTWEITER VERSAND">SHIPPING WORLDWIDE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Video Testimonials -->
+    <section id="video-testimonials" class="video-testimonials-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-en="WHAT OUR CLIENTS SAY" data-de="WAS UNSERE KUNDEN SAGEN">WHAT OUR CLIENTS SAY</h2>
+            
+            <div class="carousel-pagination">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            
+            <div class="video-carousel">
+                <div class="video-carousel-track">
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <img src="assets/testimonial-1.jpg" alt="Client 1">
+                            <div class="play-button-small">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="video-client">JOHN D.</p>
+                        <p class="video-location" data-en="USA" data-de="USA">USA</p>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <img src="assets/testimonial-2.jpg" alt="Client 2">
+                            <div class="play-button-small">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="video-client">MICHAEL B.</p>
+                        <p class="video-location" data-en="GERMANY" data-de="DEUTSCHLAND">GERMANY</p>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <img src="assets/testimonial-3.jpg" alt="Client 3">
+                            <div class="play-button-small">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <p class="video-client">CHRIS L.</p>
+                        <p class="video-location" data-en="UK" data-de="UK">UK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-en="WHAT MAKES WARCHARGE DIFFERENT FROM OTHER SUPPLEMENTS?" data-de="WAS MACHT WARCHARGE ANDERS ALS ANDERE NAHRUNGSERGÄNZUNGSMITTEL?">WHAT MAKES WARCHARGE DIFFERENT FROM OTHER SUPPLEMENTS?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-en="WARCHARGE ISN'T JUST ANOTHER SUPPLEMENT - IT'S A COMPLETE NUTRITIONAL SYSTEM. WHILE MOST PRODUCTS FOCUS ON ONE AREA, WE'VE ENGINEERED A COMPREHENSIVE FORMULA THAT ADDRESSES GUT HEALTH, HORMONAL BALANCE, COGNITIVE FUNCTION, AND PHYSICAL PERFORMANCE SIMULTANEOUSLY. EVERY INGREDIENT IS CLINICALLY DOSED AND WORKS SYNERGISTICALLY." data-de="WARCHARGE IST NICHT NUR EIN WEITERES NAHRUNGSERGÄNZUNGSMITTEL - ES IST EIN KOMPLETTES ERNÄHRUNGSSYSTEM. WÄHREND DIE MEISTEN PRODUKTE SICH AUF EINEN BEREICH KONZENTRIEREN, HABEN WIR EINE UMFASSENDE FORMEL ENTWICKELT, DIE DARMGESUNDHEIT, HORMONELLES GLEICHGEWICHT, KOGNITIVE FUNKTION UND KÖRPERLICHE LEISTUNG GLEICHZEITIG ADRESSIERT.">
+                                    WARCHARGE ISN'T JUST ANOTHER SUPPLEMENT - IT'S A COMPLETE NUTRITIONAL SYSTEM. WHILE MOST PRODUCTS FOCUS ON ONE AREA, WE'VE ENGINEERED A COMPREHENSIVE FORMULA THAT ADDRESSES GUT HEALTH, HORMONAL BALANCE, COGNITIVE FUNCTION, AND PHYSICAL PERFORMANCE SIMULTANEOUSLY. EVERY INGREDIENT IS CLINICALLY DOSED AND WORKS SYNERGISTICALLY.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-en="HOW LONG UNTIL I SEE RESULTS?" data-de="WIE LANGE DAUERT ES, BIS ICH ERGEBNISSE SEHE?">HOW LONG UNTIL I SEE RESULTS?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-en="MOST USERS REPORT NOTICEABLE IMPROVEMENTS IN ENERGY AND FOCUS WITHIN THE FIRST WEEK. HORMONAL OPTIMIZATION AND BODY COMPOSITION CHANGES TYPICALLY MANIFEST WITHIN 4-6 WEEKS OF CONSISTENT USE. MAXIMUM BENEFITS COMPOUND OVER 90+ DAYS AS YOUR BODY FULLY ADAPTS." data-de="DIE MEISTEN ANWENDER BERICHTEN VON SPÜRBAREN VERBESSERUNGEN BEI ENERGIE UND FOKUS INNERHALB DER ERSTEN WOCHE. HORMONELLE OPTIMIERUNG UND KÖRPERZUSAMMENSETZUNGSVERÄNDERUNGEN ZEIGEN SICH TYPISCHERWEISE INNERHALB VON 4-6 WOCHEN BEI KONSEQUENTER ANWENDUNG.">
+                                    MOST USERS REPORT NOTICEABLE IMPROVEMENTS IN ENERGY AND FOCUS WITHIN THE FIRST WEEK. HORMONAL OPTIMIZATION AND BODY COMPOSITION CHANGES TYPICALLY MANIFEST WITHIN 4-6 WEEKS OF CONSISTENT USE. MAXIMUM BENEFITS COMPOUND OVER 90+ DAYS AS YOUR BODY FULLY ADAPTS.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-en="IS WARCHARGE SAFE TO TAKE WITH OTHER SUPPLEMENTS?" data-de="IST WARCHARGE SICHER MIT ANDEREN NAHRUNGSERGÄNZUNGSMITTELN ZU NEHMEN?">IS WARCHARGE SAFE TO TAKE WITH OTHER SUPPLEMENTS?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-en="YES, WARCHARGE IS DESIGNED TO BE YOUR PRIMARY FOUNDATIONAL SUPPLEMENT. HOWEVER, BECAUSE IT'S SO COMPREHENSIVE, MANY USERS FIND THEY CAN ELIMINATE MULTIPLE OTHER PRODUCTS. ALWAYS CONSULT YOUR HEALTHCARE PROVIDER BEFORE COMBINING SUPPLEMENTS, ESPECIALLY IF YOU'RE TAKING PRESCRIPTION MEDICATIONS." data-de="JA, WARCHARGE IST KONZIPIERT, UM IHR PRIMÄRES BASISERGÄNZUNGSMITTEL ZU SEIN. DA ES JEDOCH SO UMFASSEND IST, STELLEN VIELE BENUTZER FEST, DASS SIE MEHRERE ANDERE PRODUKTE ELIMINIEREN KÖNNEN. KONSULTIEREN SIE IMMER IHREN ARZT, BEVOR SIE ERGÄNZUNGEN KOMBINIEREN.">
+                                    YES, WARCHARGE IS DESIGNED TO BE YOUR PRIMARY FOUNDATIONAL SUPPLEMENT. HOWEVER, BECAUSE IT'S SO COMPREHENSIVE, MANY USERS FIND THEY CAN ELIMINATE MULTIPLE OTHER PRODUCTS. ALWAYS CONSULT YOUR HEALTHCARE PROVIDER BEFORE COMBINING SUPPLEMENTS, ESPECIALLY IF YOU'RE TAKING PRESCRIPTION MEDICATIONS.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-en="WHAT'S YOUR REFUND POLICY?" data-de="WIE LAUTET IHRE RÜCKERSTATTUNGSRICHTLINIE?">WHAT'S YOUR REFUND POLICY?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-en="WE OFFER A 60-DAY MONEY-BACK GUARANTEE. IF YOU'RE NOT COMPLETELY SATISFIED WITH YOUR RESULTS, SIMPLY CONTACT OUR TEAM FOR A FULL REFUND - NO QUESTIONS ASKED. WE STAND BEHIND OUR PRODUCT 100%." data-de="WIR BIETEN EINE 60-TÄGIGE GELD-ZURÜCK-GARANTIE. WENN SIE MIT IHREN ERGEBNISSEN NICHT VOLLSTÄNDIG ZUFRIEDEN SIND, KONTAKTIEREN SIE EINFACH UNSER TEAM FÜR EINE VOLLSTÄNDIGE RÜCKERSTATTUNG - KEINE FRAGEN GESTELLT.">
+                                    WE OFFER A 60-DAY MONEY-BACK GUARANTEE. IF YOU'RE NOT COMPLETELY SATISFIED WITH YOUR RESULTS, SIMPLY CONTACT OUR TEAM FOR A FULL REFUND - NO QUESTIONS ASKED. WE STAND BEHIND OUR PRODUCT 100%.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span data-en="HOW DO I TAKE WARCHARGE?" data-de="WIE NEHME ICH WARCHARGE EIN?">HOW DO I TAKE WARCHARGE?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p data-en="MIX ONE SCOOP WITH 8-12 OZ OF COLD WATER OR YOUR PREFERRED BEVERAGE. FOR OPTIMAL RESULTS, TAKE IN THE MORNING ON AN EMPTY STOMACH OR 30 MINUTES BEFORE YOUR WORKOUT. CONSISTENCY IS KEY - DAILY USE PRODUCES THE BEST OUTCOMES." data-de="MISCHEN SIE EINEN MESSLÖFFEL MIT 250-350 ML KALTEM WASSER ODER IHREM BEVORZUGTEN GETRÄNK. FÜR OPTIMALE ERGEBNISSE NEHMEN SIE ES MORGENS AUF NÜCHTERNEN MAGEN ODER 30 MINUTEN VOR DEM TRAINING EIN.">
+                                    MIX ONE SCOOP WITH 8-12 OZ OF COLD WATER OR YOUR PREFERRED BEVERAGE. FOR OPTIMAL RESULTS, TAKE IN THE MORNING ON AN EMPTY STOMACH OR 30 MINUTES BEFORE YOUR WORKOUT. CONSISTENCY IS KEY - DAILY USE PRODUCES THE BEST OUTCOMES.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5">
+                    <div class="faq-header">
+                        <h2 class="faq-title">FAQ'S</h2>
+                        <p class="faq-subtitle" data-en="OUR MOST COMMONLY ASKED QUESTIONS" data-de="UNSERE AM HÄUFIGSTEN GESTELLTEN FRAGEN">OUR MOST COMMONLY ASKED QUESTIONS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Email Signup -->
+    <section id="email-signup" class="email-signup-section">
+        <div class="container">
+            <p class="signup-pretitle" data-en="GET NOTIFIED" data-de="BENACHRICHTIGUNG ERHALTEN">GET NOTIFIED</p>
+            <h2 class="signup-title" data-en="BE THE FIRST TO KNOW" data-de="SEIEN SIE DER ERSTE, DER ES ERFÄHRT">BE THE FIRST TO KNOW</h2>
+            
+            <form class="signup-form">
+                <div class="input-glow">
+                    <input type="email" placeholder="Enter your email" data-en-placeholder="Enter your email" data-de-placeholder="Geben Sie Ihre E-Mail ein" required>
+                    <button type="submit" class="btn-join">JOIN</button>
+                </div>
+            </form>
+            
+            <p class="signup-disclaimer">
+                <span data-en="By subscribing, you agree to our" data-de="Mit dem Abonnieren stimmen Sie unseren">By subscribing, you agree to our</span>
+                <a href="#terms" data-en="Terms & Conditions" data-de="Geschäftsbedingungen">Terms & Conditions</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 11: Footer -->
+    <footer id="footer" class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h4 data-en="My Account" data-de="Mein Konto">My Account</h4>
+                    <ul class="footer-links">
+                        <li><a href="#login" data-en="Login" data-de="Anmelden">Login</a></li>
+                        <li><a href="#orders" data-en="My Orders" data-de="Meine Bestellungen">My Orders</a></li>
+                        <li><a href="#wishlist" data-en="Wishlist" data-de="Wunschliste">Wishlist</a></li>
+                        <li><a href="#settings" data-en="Account Settings" data-de="Kontoeinstellungen">Account Settings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h4 data-en="Sitemap" data-de="Sitemap">Sitemap</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-en="Home" data-de="Startseite">Home</a></li>
+                        <li><a href="#about" data-en="About Us" data-de="Über uns">About Us</a></li>
+                        <li><a href="#products" data-en="Products" data-de="Produkte">Products</a></li>
+                        <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h4 data-en="Legal" data-de="Rechtliches">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy" data-en="Privacy Policy" data-de="Datenschutzrichtlinie">Privacy Policy</a></li>
+                        <li><a href="#terms" data-en="Terms & Conditions" data-de="Geschäftsbedingungen">Terms & Conditions</a></li>
+                        <li><a href="#shipping" data-en="Shipping Policy" data-de="Versandrichtlinie">Shipping Policy</a></li>
+                        <li><a href="#returns" data-en="Return Policy" data-de="Rückgaberichtlinie">Return Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h4 data-en="Follow Us On" data-de="Folgen Sie uns auf">Follow Us On</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-brand">
+                <div class="logo-flame-footer">🔥</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
