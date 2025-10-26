@@ -34,6 +34,7 @@ body {
 }
 
 /* Custom Cursor Styles */
+/*
 *, *:hover {
     cursor: url('assets/default_64_2.png') 16 16, auto !important;
 }
@@ -58,7 +59,7 @@ body.cursor-click .btn-cta *,
 body.cursor-click .btn-cta *:hover {
     cursor: url('assets/click64.gif') 16 16, pointer !important;
 }
-
+*/
 /* =================================
    NAVIGATION BAR
    ================================= */

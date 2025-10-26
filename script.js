@@ -507,6 +507,7 @@ function handleResponsive() {
 window.addEventListener('resize', handleResponsive);
 window.addEventListener('load', handleResponsive);
 
+/*
 // Custom Cursor Click Animation
 let clickAnimationTimeout = null;
 
@@ -530,6 +531,7 @@ document.addEventListener('click', function(e) {
         }, 260);
     }
 });
+*/
 
 // =================================
 // PERFORMANCE OPTIMIZATION
