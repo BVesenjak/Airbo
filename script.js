@@ -169,22 +169,22 @@ document.addEventListener('click', (e) => {
 
 const testimonials = [
     {
-        name: "MARCUS K.",
-        quote: "WARCHARGE transformed my entire approach to health and performance. Within two weeks, I noticed dramatic improvements in energy, focus, and recovery. This isn't just a supplement - it's a complete game-changer for any man serious about optimizing his life.",
-        credentials: "Former Navy SEAL · Entrepreneur",
-        image: "assets/testimonial-marcus.jpg"
+        name: "MATILDA D.",
+        quote: "It’s funny how something so small can change the whole mood of a day. You feel lighter, cooler more yourself. It’s not just a breeze, it's that peaceful, slowed-down feeling it produces. It's like the breeze understands you. That’s what I love the most about it. It’s a tiny piece of freedom I can hold in my hand every day.",
+        credentials: "Creative Director · Style Founder",
+        image: "assets/testimonial-matilda.jpg"
     },
     {
-        name: "JAMES R.",
-        quote: "As a competitive athlete and business owner, I need to perform at the highest level every single day. WARCHARGE delivers on every promise. My testosterone levels are up, my stress is down, and I'm operating at a level I didn't think was possible at 42.",
-        credentials: "Professional Athlete · CEO",
-        image: "assets/testimonial-james.jpg"
+        name: "NAOTO F.",
+        quote: "When an object fits naturally into daily life, you stop thinking about it, yet you’d miss it if it were gone. That’s the balance I respect. A device that moves the air softly, breezily even, intuitively it reminds you that comfort doesn’t need to make a hassle. It just needs to happen, at the right time, in the right way.",
+        credentials: " Product Designer · MUJI Collaborator",
+        image: "assets/testimonial-naoto.jpg"
     },
     {
-        name: "ALEX M.",
-        quote: "I've tried countless supplements over the years, and most deliver marginal results at best. WARCHARGE is different. The comprehensive formula addresses everything - gut health, hormones, energy, cognition. After 90 days, I'm a completely different version of myself.",
-        credentials: "Fitness Coach · Health Advocate",
-        image: "assets/testimonial-alex.jpg"
+        name: "DIETER R.",
+        quote: "The best tools almost disappear — they simply work. Nothing excessive, nothing constrained, everything just so. Fresh air on demand is a small thing, but it’s also the essence of comfort. In an age that celebrates more, it’s the less that restores you. True luxury is found in what doesn’t ask for attention, but quietly makes life better.",
+        credentials: "Industrial Designer · Minimalist Thinker",
+        image: "assets/testimonial-dieter.jpg"
     }
 ];
 
