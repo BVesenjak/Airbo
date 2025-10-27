@@ -346,6 +346,30 @@ body.cursor-click .btn-cta *:hover {
     align-items: center;
     gap: 10px;
 }
+/* Arrow shoot animation */
+.btn-choose:hover i {
+    transform: translateX(10px);
+    display: inline-block;
+    transition: transform 0.15s ease-out;
+}
+
+.btn-choose.arrow-shoot i {
+    animation: arrowShoot 0.4s ease-out;
+}
+
+@keyframes arrowShoot {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(150%);  /* 1.5x width to the right */
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 /* =================================
    TYPOGRAPHY

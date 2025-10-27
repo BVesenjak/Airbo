@@ -384,6 +384,26 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+
+// =================================
+// CHOOSE NOW BUTTON ARROW ANIMATION
+// =================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.btn-choose').forEach(button => {
+        button.addEventListener('click', function(e) {
+            console.log('Button clicked!'); // Debug message
+            
+            // Add animation class
+            this.classList.add('arrow-shoot');
+            
+            // Remove class after animation completes
+            setTimeout(() => {
+                this.classList.remove('arrow-shoot');
+            }, 400);
+        });
+    });
+});
 // =================================
 // CART FUNCTIONALITY (Basic)
 // =================================
