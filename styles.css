@@ -968,17 +968,22 @@ p {
 .video-thumbnail {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 400px;  /* ADD THIS - prevents collapse */
+    aspect-ratio: 16 / 9;  /* ADD THIS - maintains ratio */
     background-color: var(--medium-gray);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;  /* ADD THIS - keeps video contained */
 }
 
 .video-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;  /* ADD THIS - prevents layout shift */
+    top: 0;
+    left: 0;
 }
 
 .play-button {
@@ -1399,6 +1404,41 @@ p {
 .logo-flame-footer {
     font-size: 48px;
     filter: drop-shadow(0 0 20px rgba(229, 9, 20, 0.5));
+}
+
+/* =================================
+   INLINE VIDEO PLAYER STYLES
+   ================================= */
+
+.video-thumbnail,
+.video-thumb {
+    position: relative;
+}
+
+.video-thumbnail video,
+.video-thumb video {
+    border-radius: 10px;
+}
+
+/* Hide controls initially, show on hover/tap */
+.video-thumbnail video::-webkit-media-controls-panel,
+.video-thumb video::-webkit-media-controls-panel {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-thumbnail video:hover::-webkit-media-controls-panel,
+.video-thumb video:hover::-webkit-media-controls-panel,
+.video-thumbnail video:focus::-webkit-media-controls-panel,
+.video-thumb video:focus::-webkit-media-controls-panel {
+    opacity: 1;
+}
+
+/* Ensure video maintains aspect ratio */
+.media-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* =================================

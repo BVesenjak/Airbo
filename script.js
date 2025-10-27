@@ -472,20 +472,68 @@ style.textContent = `
 document.head.appendChild(style);
 
 // =================================
-// VIDEO PLAY FUNCTIONALITY
+// INLINE VIDEO PLAYER (Simple)
 // =================================
 
+// Video sources - replace with your actual video paths
+const videoSources = {
+    'promo': 'assets/promo-airbo.mp4',
+    'testimonial-1': 'https://www.w3schools.com/html/mov_bbb.mp4',
+    'testimonial-2': 'https://www.w3schools.com/html/mov_bbb.mp4',
+    'testimonial-3': 'https://www.w3schools.com/html/mov_bbb.mp4'
+};
+
+// Handle play button clicks - replace thumbnail with video
 document.querySelectorAll('.play-button, .play-button-small').forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
         
-        // Here you would typically open a modal with the video
-        // For now, we'll just show an alert
-        const message = currentLanguage === 'en' 
-            ? 'Video player would open here' 
-            : 'Videoplayer würde sich hier öffnen';
+        // Find the parent container
+        const videoThumbnail = button.closest('.video-thumbnail') || button.closest('.video-thumb');
         
-        alert(message);
+        if (!videoThumbnail) return;
+        
+        // Determine which video to play
+        let videoSrc;
+        const videoCard = button.closest('.video-card');
+        const isPromo = button.closest('.media-frame');
+        
+        if (isPromo) {
+            videoSrc = videoSources['promo'];
+        } else if (videoCard) {
+            const cards = Array.from(document.querySelectorAll('.video-card'));
+            const index = cards.indexOf(videoCard);
+            videoSrc = videoSources[`testimonial-${index + 1}`] || videoSources['promo'];
+        } else {
+            videoSrc = videoSources['promo'];
+        }
+        
+        // Store original content in case of error
+        const originalContent = videoThumbnail.innerHTML;
+        
+        // Create video element
+        const video = document.createElement('video');
+        video.src = videoSrc;
+        video.controls = true;
+        video.autoplay = true;
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.objectFit = 'contain';
+        video.style.backgroundColor = '#2255';
+        
+        // Error handling - restore thumbnail if video fails
+        video.addEventListener('error', () => {
+            console.error('Video failed to load:', videoSrc);
+            videoThumbnail.innerHTML = originalContent;
+            alert('Video not found. Please add video files to the assets folder.');
+        });
+        
+        // Only replace content when video starts loading
+        video.addEventListener('loadstart', () => {
+            videoThumbnail.innerHTML = '';
+            videoThumbnail.appendChild(video);
+            videoThumbnail.style.position = 'relative';
+        });
     });
 });
 
