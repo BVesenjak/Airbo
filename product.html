@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy your health - Premium wellness products">
+    <title>Buy Your Health | WARCHARGE</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-content">
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <a href="index.html" class="navbar-logo">
+                    <div class="logo-flame" style="font-size: 48px;"><i class="fas fa-cog"></i></div>
+                </a>
+                
+                <div class="navbar-links">
+                    <a href="index.html#merch" class="nav-link" data-en="MERCH" data-de="MERCH">MERCH</a>
+                    <a href="product.html" class="nav-link nav-link-cta" data-en="GET WARCHARGE" data-de="WARCHARGE KAUFEN">GET WARCHARGE</a>
+                </div>
+                
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+        <button class="close-menu" id="closeMenuBtn">&times;</button>
+        <ul class="menu-list">
+            <li><a href="index.html#hero" data-en="Home" data-de="Startseite">Home</a></li>
+            <li><a href="index.html#value-prop" data-en="Benefits" data-de="Vorteile">Benefits</a></li>
+            <li><a href="index.html#features" data-en="Features" data-de="Funktionen">Features</a></li>
+            <li><a href="index.html#product-highlight" data-en="Product" data-de="Produkt">Product</a></li>
+            <li><a href="index.html#testimonials" data-en="Testimonials" data-de="Erfahrungsberichte">Testimonials</a></li>
+            <li><a href="index.html#faq" data-en="FAQ" data-de="FAQ">FAQ</a></li>
+            <li><a href="index.html#newsletter" data-en="Newsletter" data-de="Newsletter">Newsletter</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Buy Block -->
+    <section id="hero-buy" class="hero-buy">
+        <div class="container">
+            <div class="hero-buy__grid">
+                <div class="hero-buy__media">
+                    <video 
+                        class="hero-buy__video" 
+                        poster="assets/high-energy.jpg" 
+                        muted 
+                        loop 
+                        playsinline
+                        data-autoplay-muted>
+                        <source src="assets/hero-animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="hero-buy__content">
+                    <h1 class="hero-buy__title">buy your health</h1>
+                    <p class="hero-buy__subtitle">Engineered comfort meets instant climate control for peak performance anywhere.</p>
+                    
+                    <div class="trust-row">
+                        <div class="stars" role="img" aria-label="5 out of 5 stars">
+                            <svg class="star" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0l2.5 6.5L19 7.5l-5 4.5L15.5 19 10 15.5 4.5 19 6 12 1 7.5l6.5-1z"/>
+                            </svg>
+                            <svg class="star" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0l2.5 6.5L19 7.5l-5 4.5L15.5 19 10 15.5 4.5 19 6 12 1 7.5l6.5-1z"/>
+                            </svg>
+                            <svg class="star" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0l2.5 6.5L19 7.5l-5 4.5L15.5 19 10 15.5 4.5 19 6 12 1 7.5l6.5-1z"/>
+                            </svg>
+                            <svg class="star" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0l2.5 6.5L19 7.5l-5 4.5L15.5 19 10 15.5 4.5 19 6 12 1 7.5l6.5-1z"/>
+                            </svg>
+                            <svg class="star" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0l2.5 6.5L19 7.5l-5 4.5L15.5 19 10 15.5 4.5 19 6 12 1 7.5l6.5-1z"/>
+                            </svg>
+                        </div>
+                        <span class="trust-row__text">Trusted by 50,000+ customers worldwide</span>
+                    </div>
+                    
+                    <div class="price-block">
+                        <div class="price-block__main">
+                            <span class="price-block__compare">$129.99</span>
+                            <span class="price-block__current" id="currentPrice">$79.99</span>
+                        </div>
+                        <span class="price-block__savings">Save $50</span>
+                    </div>
+                    
+                    <!-- Variant Selectors -->
+                    <div class="variant-group">
+                        <label class="variant-group__label">Size</label>
+                        <div class="variant-pills" role="radiogroup" aria-label="Select size">
+                            <button class="pill pill--active" role="radio" aria-checked="true" data-variant-type="size" data-value="m">M</button>
+                            <button class="pill" role="radio" aria-checked="false" data-variant-type="size" data-value="l">L</button>
+                            <button class="pill" role="radio" aria-checked="false" data-variant-type="size" data-value="xl">XL</button>
+                        </div>
+                    </div>
+                    
+                    <div class="variant-group">
+                        <label class="variant-group__label">Color</label>
+                        <div class="variant-pills" role="radiogroup" aria-label="Select color">
+                            <button class="pill pill--active" role="radio" aria-checked="true" data-variant-type="color" data-value="black">Black</button>
+                            <button class="pill" role="radio" aria-checked="false" data-variant-type="color" data-value="stone">Stone</button>
+                            <button class="pill" role="radio" aria-checked="false" data-variant-type="color" data-value="sage">Sage</button>
+                        </div>
+                    </div>
+                    
+                    <div class="variant-group">
+                        <label class="variant-group__label">Bundle</label>
+                        <div class="variant-pills" role="radiogroup" aria-label="Select bundle">
+                            <button class="pill pill--active" role="radio" aria-checked="true" data-variant-type="bundle" data-value="solo">Solo</button>
+                            <button class="pill" role="radio" aria-checked="false" data-variant-type="bundle" data-value="duo">Duo (Save 15%)</button>
+                            <button class="pill" role="radio" aria-checked="false" data-variant-type="bundle" data-value="family">Family (Save 25%)</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Quantity -->
+                    <div class="quantity-group">
+                        <label class="quantity-group__label" for="quantity">Quantity</label>
+                        <div class="quantity-stepper">
+                            <button class="quantity-stepper__btn" aria-label="Decrease quantity" data-action="decrease">−</button>
+                            <input 
+                                type="number" 
+                                id="quantity" 
+                                class="quantity-stepper__input" 
+                                value="1" 
+                                min="1" 
+                                max="99" 
+                                aria-label="Quantity">
+                            <button class="quantity-stepper__btn" aria-label="Increase quantity" data-action="increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Checkbox -->
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="giftWrap">
+                        <span class="custom-checkbox__box"></span>
+                        <span class="custom-checkbox__label">Add gift wrap (+$5.00)</span>
+                    </label>
+                    
+                    <!-- CTAs -->
+                    <div class="cta-group">
+                        <button class="btn btn--primary" id="addToCart" data-analytics="add-to-cart">Add to Cart</button>
+                        <button class="btn btn--secondary" id="buyNow" data-analytics="buy-now">Buy Now</button>
+                    </div>
+                    
+                    <div class="micro-copy">
+                        <p>✓ Free shipping on orders over $50</p>
+                        <p>✓ 30-day money-back guarantee</p>
+                    </div>
+                    
+                    <button class="scroll-cue" aria-label="Scroll to benefits">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="benefits__title">
+                <span class="weight-light">Why choose</span>
+                <span class="weight-bold">WARCHARGE</span>
+            </h2>
+            <p class="benefits__subtitle">Experience the difference of premium craftsmanship and customer-first service.</p>
+            
+            <div class="benefits__grid">
+                <article class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">Fast Shipping</h3>
+                    <p class="benefit-card__text">Worldwide delivery in 3-5 business days with real-time tracking.</p>
+                </article>
+                
+                <article class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">Premium Materials</h3>
+                    <p class="benefit-card__text">Lab-tested components with industry-leading quality standards.</p>
+                </article>
+                
+                <article class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">Secure Checkout</h3>
+                    <p class="benefit-card__text">256-bit SSL encryption and trusted payment gateways.</p>
+                </article>
+                
+                <article class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">30-Day Returns</h3>
+                    <p class="benefit-card__text">Hassle-free returns with full refund—no questions asked.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Product Featured -->
+    <section id="hero-product" class="hero-product">
+        <div class="container">
+            <div class="hero-product__grid">
+                <div class="hero-product__gallery">
+                    <img 
+                        src="assets/high-energy.jpg" 
+                        alt="WARCHARGE product main view" 
+                        class="hero-product__main-img"
+                        id="mainProductImage"
+                        loading="lazy">
+                    <div class="hero-product__thumbnails">
+                        <button class="thumb thumb--active" data-src="assets/high-energy.jpg">
+                            <img src="assets/product-main.jpg" alt="View 1" loading="lazy">
+                        </button>
+                        <button class="thumb" data-src="assets/high-energy.jpg">
+                            <img src="assets/high-energy.jpg" alt="View 2" loading="lazy">
+                        </button>
+                        <button class="thumb" data-src="assets/high-energy.jpg">
+                            <img src="assets/high-energy.jpg" alt="View 3" loading="lazy">
+                        </button>
+                        <button class="thumb" data-src="assets/high-energy.jpg">
+                            <img src="assets/high-energy.jpg" alt="View 4" loading="lazy">
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-product__details">
+                    <h2 class="hero-product__title">WARCHARGE Portable Power</h2>
+                    
+                    <ul class="feature-list">
+                        <li>Advanced temperature regulation technology</li>
+                        <li>20-hour battery life on single charge</li>
+                        <li>Whisper-quiet operation (< 30dB)</li>
+                        <li>Medical-grade materials, hypoallergenic</li>
+                        <li>IPX5 water-resistant design</li>
+                        <li>USB-C fast charging (0-100% in 2 hours)</li>
+                    </ul>
+                    
+                    <table class="spec-table">
+                        <caption class="spec-table__caption">Technical Specifications</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Weight</th>
+                                <td>185g (6.5 oz)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dimensions</th>
+                                <td>12 × 8 × 3 cm</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Battery</th>
+                                <td>3000 mAh Li-ion</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Warranty</th>
+                                <td>2 years limited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="price-callout">
+                        <span class="price-callout__label">Your price:</span>
+                        <span class="price-callout__value">$79.99</span>
+                    </div>
+                    
+                    <div class="whats-in-box">
+                        <h3 class="whats-in-box__title">What's in the box</h3>
+                        <ul class="whats-in-box__list">
+                            <li>1× WARCHARGE device</li>
+                            <li>1× USB-C charging cable</li>
+                            <li>1× Travel pouch</li>
+                            <li>1× Quick-start guide</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn btn--primary" id="addToCartSecondary" data-analytics="add-to-cart-featured">Add to Cart</button>
+                    
+                    <a href="#hero-buy" class="link-subtle">See all variants →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Video -->
+    <section id="brand-video" class="brand-video">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="weight-light">Our</span>
+                <span class="weight-bold">Mission</span>
+            </h2>
+            <p class="section-subtitle">Building wellness technology that empowers your daily life.</p>
+            
+            <div class="video-module">
+                <div class="video-module__wrapper">
+                    <img 
+                        src="assets/high-energy.jpg" 
+                        alt="Brand story video" 
+                        class="video-module__poster"
+                        id="brandVideoPoster"
+                        loading="lazy">
+                    <button class="video-module__play" id="brandVideoPlay" aria-label="Play brand video">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="currentColor">
+                            <circle cx="32" cy="32" r="32" opacity="0.9"/>
+                            <path d="M26 20l20 12-20 12V20z" fill="white"/>
+                        </svg>
+                    </button>
+                    <video 
+                        class="video-module__video" 
+                        id="brandVideo"
+                        poster="assets/high-energy.jpg"
+                        controls
+                        style="display: none;">
+                        <source src="assets/hero-animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="video-module__caption">Discover how WARCHARGE is redefining personal wellness.</p>
+            </div>
+            
+            <div class="credibility-badges">
+                <div class="badge">
+                    <span class="badge__label">Featured in</span>
+                    <span class="badge__value">TechCrunch</span>
+                </div>
+                <div class="badge">
+                    <span class="badge__label">Certified by</span>
+                    <span class="badge__value">CE & FDA</span>
+                </div>
+                <div class="badge">
+                    <span class="badge__label">Awarded</span>
+                    <span class="badge__value">Best Design 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our DNA -->
+    <section id="our-dna" class="our-dna">
+        <div class="container">
+            <div class="section-divider"></div>
+            
+            <h2 class="section-title">
+                <span class="weight-light">What we</span>
+                <span class="weight-bold">Stand For</span>
+            </h2>
+            
+            <div class="dna-grid">
+                <article class="dna-tile">
+                    <div class="dna-tile__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="dna-tile__title">Craftsmanship</h3>
+                    <p class="dna-tile__text">Every detail is meticulously engineered by experts who obsess over quality. From material selection to final assembly, we never compromise on excellence.</p>
+                </article>
+                
+                <article class="dna-tile">
+                    <div class="dna-tile__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="dna-tile__title">Sustainability</h3>
+                    <p class="dna-tile__text">We believe wellness extends beyond personal health to planetary health. Our products use recycled materials and carbon-neutral shipping whenever possible.</p>
+                </article>
+                
+                <article class="dna-tile">
+                    <div class="dna-tile__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="dna-tile__title">Performance</h3>
+                    <p class="dna-tile__text">Built for those who demand more. Rigorous testing ensures WARCHARGE performs flawlessly in any environment—office, gym, travel, or home.</p>
+                </article>
+            </div>
+            
+            <div class="section-divider"></div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="weight-light">Explore our</span>
+                <span class="weight-bold">Collections</span>
+            </h2>
+            
+            <div class="category-grid">
+                <article class="category-card">
+                    <img src="assets/high-energy.jpg" alt="Jackets collection" class="category-card__img" loading="lazy">
+                    <div class="category-card__content">
+                        <h3 class="category-card__title">JACKETS</h3>
+                        <p class="category-card__desc">Climate-adaptive outerwear for all seasons</p>
+                        <a href="#" class="category-card__cta">Shop Category →</a>
+                    </div>
+                </article>
+                
+                <article class="category-card">
+                    <img src="assets/high-energy.jpg" alt="Accessories collection" class="category-card__img" loading="lazy">
+                    <div class="category-card__content">
+                        <h3 class="category-card__title">ACCESSORIES</h3>
+                        <p class="category-card__desc">Essential add-ons that enhance performance</p>
+                        <a href="#" class="category-card__cta">Shop Category →</a>
+                    </div>
+                </article>
+                
+                <article class="category-card">
+                    <img src="assets/high-energy.jpg" alt="Limited editions collection" class="category-card__img" loading="lazy">
+                    <div class="category-card__content">
+                        <h3 class="category-card__title">LIMITED EDITIONS</h3>
+                        <p class="category-card__desc">Exclusive drops you won't find anywhere else</p>
+                        <a href="#" class="category-card__cta">Shop Category →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="story">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="weight-light">Our</span>
+                <span class="weight-bold">Story</span>
+            </h2>
+            
+            <div class="story__grid">
+                <div class="story__column">
+                    <h3 class="story__subtitle">Origin & Mission</h3>
+                    <p class="story__text">WARCHARGE was born from a simple observation: people were sacrificing comfort for convenience. We saw travelers, athletes, and professionals struggling with bulky, ineffective wellness tools.</p>
+                    <p class="story__text">Our mission became clear—create technology so elegant and powerful that it disappears into your routine while dramatically improving your quality of life.</p>
+                </div>
+                
+                <div class="story__column">
+                    <h3 class="story__subtitle">Vision & Impact</h3>
+                    <p class="story__text">We envision a world where personal wellness is effortless, accessible, and sustainable. Every product we design pushes the boundaries of what's possible.</p>
+                    <p class="story__text">Today, over 50,000 customers across 40 countries trust WARCHARGE to help them perform at their best—every single day.</p>
+                </div>
+            </div>
+            
+            <blockquote class="story__quote">
+                <p>"We don't build products. We build experiences that help people reclaim their energy and focus in an overstimulated world."</p>
+                <footer>— Alex Morrison, Founder & CEO</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="weight-light">Lifestyle</span>
+                <span class="weight-bold">Gallery</span>
+            </h2>
+            
+            <div class="gallery__grid">
+                <button class="gallery__item" data-lightbox="assets/high-energy.jpg" data-caption="Perfect for office productivity">
+                    <img src="assets/high-energy.jpg" alt="WARCHARGE in office setting" loading="lazy">
+                    <span class="gallery__tag" data-variant="m-black-solo">Shop this look</span>
+                </button>
+                <button class="gallery__item" data-lightbox="assets/high-energy.jpg" data-caption="Travel companion for long flights">
+                    <img src="assets/high-energy.jpg" alt="WARCHARGE during travel" loading="lazy">
+                    <span class="gallery__tag" data-variant="l-stone-solo">Shop this look</span>
+                </button>
+                <button class="gallery__item" data-lightbox="assets/high-energy.jpg" data-caption="Post-workout recovery essential">
+                    <img src="assets/high-energy.jpg" alt="WARCHARGE at gym" loading="lazy">
+                    <span class="gallery__tag" data-variant="m-sage-solo">Shop this look</span>
+                </button>
+                <button class="gallery__item" data-lightbox="assets/high-energy.jpg" data-caption="Evening wind-down ritual">
+                    <img src="assets/high-energy.jpg" alt="WARCHARGE at home" loading="lazy">
+                </button>
+                <button class="gallery__item" data-lightbox="assets/high-energy.jpg" data-caption="Outdoor adventures made comfortable">
+                    <img src="assets/high-energy.jpg" alt="WARCHARGE outdoors" loading="lazy">
+                </button>
+                <button class="gallery__item" data-lightbox="assets/high-energy.jpg" data-caption="Portable wellness, anywhere">
+                    <img src="assets/high-energy.jpg" alt="WARCHARGE portable use" loading="lazy">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="faq__header">
+                <div class="faq__header-text">
+                    <p class="faq__subtitle">OUR MOST COMMONLY ASKED QUESTIONS</p>
+                    <h2 class="faq__title">FAQ'S</h2>
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <article class="accordion__item">
+                    <button class="accordion__trigger" aria-expanded="false">
+                        <span class="accordion__question">What are your shipping times?</span>
+                        <span class="accordion__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion__content" hidden>
+                        <p>WE SHIP WORLDWIDE WITH STANDARD DELIVERY IN 3-5 BUSINESS DAYS. EXPRESS SHIPPING (1-2 DAYS) IS AVAILABLE AT CHECKOUT. ALL ORDERS INCLUDE REAL-TIME TRACKING.</p>
+                    </div>
+                </article>
+                
+                <article class="accordion__item">
+                    <button class="accordion__trigger" aria-expanded="false">
+                        <span class="accordion__question">What is your return policy?</span>
+                        <span class="accordion__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion__content" hidden>
+                        <p>WE OFFER A 30-DAY MONEY-BACK GUARANTEE. IF YOU'RE NOT COMPLETELY SATISFIED, RETURN YOUR WARCHARGE FOR A FULL REFUND—NO QUESTIONS ASKED. ITEM MUST BE IN ORIGINAL CONDITION.</p>
+                    </div>
+                </article>
+                
+                <article class="accordion__item">
+                    <button class="accordion__trigger" aria-expanded="false">
+                        <span class="accordion__question">How do I choose the right size?</span>
+                        <span class="accordion__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion__content" hidden>
+                        <p>OUR STANDARD SIZE FITS MOST ADULTS COMFORTABLY. IF YOU PREFER A LOOSER FIT OR PLAN TO USE IT OVER CLOTHING, WE RECOMMEND SIZING UP. CHECK OUR SIZE GUIDE FOR DETAILED MEASUREMENTS.</p>
+                    </div>
+                </article>
+                
+                <article class="accordion__item">
+                    <button class="accordion__trigger" aria-expanded="false">
+                        <span class="accordion__question">What materials are used?</span>
+                        <span class="accordion__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion__content" hidden>
+                        <p>WARCHARGE USES MEDICAL-GRADE ABS PLASTIC, HYPOALLERGENIC SILICONE, AND PREMIUM LI-ION BATTERIES. ALL MATERIALS ARE TESTED FOR SAFETY AND DURABILITY. FREE FROM BPA, PHTHALATES, AND HARMFUL CHEMICALS.</p>
+                    </div>
+                </article>
+                
+                <article class="accordion__item">
+                    <button class="accordion__trigger" aria-expanded="false">
+                        <span class="accordion__question">How do I care for my WARCHARGE?</span>
+                        <span class="accordion__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion__content" hidden>
+                        <p>CLEAN WITH A DAMP CLOTH AND MILD SOAP. DO NOT SUBMERGE IN WATER (IPX5 RATED FOR SPLASHES ONLY). STORE IN PROVIDED POUCH WHEN NOT IN USE. CHARGE EVERY 30 DAYS IF NOT REGULARLY USED.</p>
+                    </div>
+                </article>
+                
+                <article class="accordion__item">
+                    <button class="accordion__trigger" aria-expanded="false">
+                        <span class="accordion__question">What warranty do you offer?</span>
+                        <span class="accordion__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion__content" hidden>
+                        <p>ALL WARCHARGE PRODUCTS INCLUDE A 2-YEAR LIMITED WARRANTY COVERING MANUFACTURING DEFECTS AND COMPONENT FAILURES. REGISTER YOUR PRODUCT WITHIN 30 DAYS FOR EXTENDED COVERAGE OPTIONS.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Cart -->
+    <div id="sticky-cart" class="sticky-cart" aria-hidden="true">
+        <div class="container">
+            <div class="sticky-cart__content">
+                <div class="sticky-cart__product">
+                    <img src="assets/high-energy.jpg" alt="WARCHARGE" class="sticky-cart__thumb" loading="lazy">
+                    <div class="sticky-cart__info">
+                        <p class="sticky-cart__name">WARCHARGE</p>
+                        <p class="sticky-cart__variant" id="stickyVariant">M / Black / Solo</p>
+                    </div>
+                </div>
+                
+                <div class="sticky-cart__price" id="stickyPrice">$79.99</div>
+                
+                <div class="sticky-cart__qty">
+                    <button class="sticky-cart__qty-btn" data-action="decrease-sticky" aria-label="Decrease quantity">−</button>
+                    <span class="sticky-cart__qty-value" id="stickyQty">1</span>
+                    <button class="sticky-cart__qty-btn" data-action="increase-sticky" aria-label="Increase quantity">+</button>
+                </div>
+                
+                <div class="sticky-cart__actions">
+                    <button class="quick-add" data-qty="1">+1</button>
+                    <button class="quick-add" data-qty="2">+2</button>
+                    <button class="quick-add" data-qty="12">+12</button>
+                </div>
+                
+                <button class="btn btn--primary btn--compact" id="buyNowSticky">BUY NOW</button>
+                
+                <div class="sticky-cart__count" id="miniCartCount">0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox__close" aria-label="Close lightbox">×</button>
+        <div class="lightbox__content">
+            <img src="" alt="" id="lightboxImg">
+            <p class="lightbox__caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="script_product.js"></script>
+</body>
+</html>
+
