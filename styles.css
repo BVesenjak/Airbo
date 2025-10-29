@@ -70,7 +70,7 @@ body.cursor-click .btn-cta *:hover {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 20px 0;
+    padding: 25px 0;
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -134,7 +134,7 @@ body.cursor-click .btn-cta *:hover {
 
 .logo-flame {
     font-size: 28px;
-    filter: drop-shadow(0 0 10px var(--red));
+    filter: drop-shadow(0 0 10px cyan);
 }
 
 .logo-text {
@@ -329,8 +329,8 @@ body.cursor-click .btn-cta *:hover {
 }
 
 .btn-cta:hover {
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(--text-gray);
+    color: var(--red);
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(255, 255, 255, 0.4);
 }
