@@ -668,9 +668,97 @@ p {
     letter-spacing: 2px;
 }
 
-.shipping-content i {
-    font-size: 24px;
-    color: var(--red);
+/* Worldwide Icon with Animated Glow */
+.worldwide-icon-wrapper {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.worldwide-icon {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.worldwide-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(204, 255, 255, 0.35) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: worldwideGlow 1.05s ease-in-out infinite;
+}
+
+/* Base Animation Sequence: a→b→c→d */
+@keyframes worldwideGlow {
+    /* a: 0.2s at 20% */
+    0%, 19% {
+        box-shadow: 0 0 40px rgba(204, 255, 255, 0.35);
+        opacity: 0.35;
+    }
+    /* b: 0.05s at 25% */
+    19.1%, 23.8% {
+        box-shadow: 0 0 45px rgba(204, 255, 255, 0.4);
+        opacity: 0.4;
+    }
+    /* c: 0.5s at 16% */
+    23.9%, 71.4% {
+        box-shadow: 0 0 35px rgba(204, 255, 255, 0.3);
+        opacity: 0.3;
+    }
+    /* d: 0.3s at 20% */
+    71.5%, 100% {
+        box-shadow: 0 0 40px rgba(204, 255, 255, 0.35);
+        opacity: 0.35;
+    }
+}
+
+/* Twitch Animation Sequence: x→y→z→v→k→j→h */
+@keyframes worldwideTwitch {
+    /* x: 0.02s at 5% */
+    0%, 10% {
+        box-shadow: 0 0 15px rgba(204, 255, 255, 0.15);
+        opacity: 0.15;
+    }
+    /* y: 0.05s at 10% */
+    10.1%, 35% {
+        box-shadow: 0 0 22px rgba(204, 255, 255, 0.22);
+        opacity: 0.22;
+    }
+    /* z: 0.02s at 5% */
+    35.1%, 45% {
+        box-shadow: 0 0 15px rgba(204, 255, 255, 0.15);
+        opacity: 0.15;
+    }
+    /* v: 0.03s at 7% */
+    45.1%, 60% {
+        box-shadow: 0 0 18px rgba(204, 255, 255, 0.18);
+        opacity: 0.18;
+    }
+    /* k: 0.05s at 14% */
+    60.1%, 85% {
+        box-shadow: 0 0 28px rgba(204, 255, 255, 0.28);
+        opacity: 0.28;
+    }
+    /* j: 0.03s at 7% */
+    85.1%, 100% {
+        box-shadow: 0 0 18px rgba(204, 255, 255, 0.18);
+        opacity: 0.18;
+    }
+}
+
+/* Applied when twitch is triggered */
+.worldwide-icon-wrapper.twitch::before {
+    animation: worldwideTwitch 0.2s ease-in-out;
 }
 
 /* =================================

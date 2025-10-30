@@ -642,6 +642,37 @@ if ('IntersectionObserver' in window) {
 }
 
 // =================================
+// WORLDWIDE ICON ANIMATED GLOW
+// =================================
+
+// Randomly trigger twitch animation after each base loop (30% chance)
+function initWorldwideIconAnimation() {
+    const icons = document.querySelectorAll('.worldwide-icon-wrapper');
+    
+    icons.forEach(icon => {
+        // Base animation duration is 1.05s (1050ms)
+        setInterval(() => {
+            // 30% chance to trigger twitch
+            if (Math.random() < 0.3) {
+                icon.classList.add('twitch');
+                
+                // Remove class after twitch animation completes (0.2s)
+                setTimeout(() => {
+                    icon.classList.remove('twitch');
+                }, 200);
+            }
+        }, 1050); // Check after each base loop
+    });
+}
+
+// Initialize on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWorldwideIconAnimation);
+} else {
+    initWorldwideIconAnimation();
+}
+
+// =================================
 // CONSOLE BRANDING
 // =================================
 
