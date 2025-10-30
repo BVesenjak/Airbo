@@ -680,6 +680,33 @@ p {
 .product-highlight-section {
     padding: 100px 0;
     background-color: var(--dark-gray);
+    background-image: url('assets/product-highlight-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.product-highlight-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(45, 45, 45, 0.85);
+    z-index: 0;
+}
+
+.product-highlight-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .product-highlight-section {
+        background-attachment: scroll;
+    }
 }
 
 .product-frame {
@@ -925,6 +952,14 @@ p {
     font-size: 64px;
     margin-bottom: 20px;
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+}
+
+.brand-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 .brand-feature-title {
@@ -1974,27 +2009,6 @@ p {
 .hero-product {
     padding: 80px 0;
     background-color: #2d2d2d;
-    background-image: url('assets/product-hero-background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.hero-product::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(45, 45, 45, 0.85);
-    z-index: 0;
-}
-
-.hero-product > .container {
-    position: relative;
-    z-index: 1;
 }
 
 .hero-product__grid {
@@ -2206,6 +2220,27 @@ p {
 .brand-video {
     padding: 80px 0;
     background-color: #1a1a1a;
+    background-image: url('assets/product-hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.brand-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 26, 26, 0.85);
+    z-index: 0;
+}
+
+.brand-video > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .video-module {
@@ -2345,6 +2380,8 @@ p {
     margin-bottom: 1.5rem;
     display: flex;
     justify-content: center;
+    font-size: 64px;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
 }
 
 .dna-tile__title {
@@ -2833,7 +2870,8 @@ p {
 @media (max-width: 767px) {
     .hero-buy,
     .our-dna,
-    .story {
+    .story,
+    .brand-video {
         background-attachment: scroll;
     }
 }
